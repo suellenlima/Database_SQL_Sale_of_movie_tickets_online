@@ -71,7 +71,7 @@ CREATE TABLE ingresso (
   FOREIGN KEY (idSessao) REFERENCES sessao (id),
 
   pS_idPos varchar(20) NOT NULL,
-  FOREIGN KEY (pS_idPos) REFERENCES poltrona_sala(idSala)
+  FOREIGN KEY (pS_idPos) REFERENCES poltrona_sala(idPos)
 
 );
 
@@ -83,4 +83,3 @@ CREATE TABLE ingresso_comprado (
   FOREIGN KEY (codigoIngresso) REFERENCES ingresso (codigo),
   FOREIGN KEY (cpfCliente) REFERENCES cliente (cpf)
 );
-
